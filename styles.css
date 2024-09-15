@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color: azure;
+}
+nav{
+    font-family: "Quicksand", sans-serif;
+ 
+}
+nav ul{
+    display: flex;
+    background-color: black;
+    list-style-type: none;
+    height: 60px;
+    color: rgb(246, 249, 249);
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.brand img{
+    filter: invert(100%);
+    width: 40px;
+    padding:0 8px ;
+   
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 15px;
+   padding-left: 10px;
+}
+.container h1{
+    margin-left: 9px;
+    padding-left: 20px;
+   
+}
+.bottom{
+    position: sticky;
+    height: 135px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    flex-direction: column;
+   
+}
+.icons{
+    margin-top: 15px;
+}
+.icons{
+    cursor: pointer;
+}
+#progbar{
+width: 50vw;
+}
+.songItem{
+height: 50px;
+display: flex;
+background-color: beige;
+color: black;
+width: 95%;
+margin: 12px 0;
+justify-content: space-between;
+align-items: center;
+border-radius: 30px;
+}
+.songItem img{
+width: 43px;
+margin:0 23px ;
+border-radius: 4px;
+}
+.timestamp{
+    margin: 0 23px;
+}
+.songItemcontainer{
+    margin-top: 54px;
+}
+.songinfo{
+    position: absolute;
+    left: 25vw;
+}
