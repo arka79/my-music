@@ -1,99 +1,184 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Quicksand:wght@300..700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
 
-}
-body{
-    background-color: azure;
-}
-nav{
+body {
+    background-color: #121212;
+    color: white;
     font-family: "Quicksand", sans-serif;
- 
 }
-nav ul{
-    display: flex;
+
+/* Navigation Bar */
+nav {
     background-color: black;
-    list-style-type: none;
-    height: 60px;
-    color: rgb(246, 249, 249);
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    list-style-type: none;
+    padding: 0 20px;
 }
-.brand img{
-    filter: invert(100%);
-    width: 40px;
-    padding:0 8px ;
-   
-}
-.brand{
+
+.brand {
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.brand img {
+    filter: invert(100%);
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #1db954;
+}
+
+/* Main Content */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: black;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Song List */
+.songItemcontainer {
+    margin-top: 20px;
+}
+
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #282828;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.songItem:hover {
+    background: #1db954;
+    transform: scale(1.02);
+}
+
+.songItem img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.songName {
+    flex: 1;
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.timestamp {
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+.songlistplay i {
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
-.container{
-    min-height: 70vh;
-    background-color: black;
-    color: aliceblue;
-    font-family: 'Times New Roman', Times, serif;
-   display: flex;
-   margin: 23px auto;
-   width: 70%;
-   border-radius: 15px;
-   padding-left: 10px;
+
+.songlistplay i:hover {
+    color: #1db954;
 }
-.container h1{
-    margin-left: 9px;
-    padding-left: 20px;
-   
-}
-.bottom{
-    position: sticky;
-    height: 135px;
-    background-color: black;
+
+/* Bottom Play Bar */
+.bottom {
+    position: fixed;
+    width: 100%;
     bottom: 0;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
     flex-direction: column;
-   
+    padding: 15px 0;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
 }
-.icons{
-    margin-top: 15px;
-}
-.icons{
+
+#progbar {
+    width: 60%;
+    height: 5px;
+    background: #1db954;
+    border-radius: 5px;
     cursor: pointer;
 }
-#progbar{
-width: 50vw;
+
+.icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
 }
-.songItem{
-height: 50px;
-display: flex;
-background-color: beige;
-color: black;
-width: 95%;
-margin: 12px 0;
-justify-content: space-between;
-align-items: center;
-border-radius: 30px;
+
+.icons i {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
-.songItem img{
-width: 43px;
-margin:0 23px ;
-border-radius: 4px;
+
+.icons i:hover {
+    color: #1db954;
 }
-.timestamp{
-    margin: 0 23px;
-}
-.songItemcontainer{
-    margin-top: 54px;
-}
-.songinfo{
-    position: absolute;
-    left: 25vw;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        padding-bottom: 5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .songItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .songName {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    #progbar {
+        width: 80%;
+    }
 }

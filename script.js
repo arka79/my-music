@@ -6,14 +6,14 @@ let next = document.getElementById('next');
 let bar = document.getElementById('progbar');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
+
 let songs = [
     { songname: "Love Ya", filepath: "1.mp3", coverpath: "1.webp" },
     { songname: "Phir Bhi", filepath: "2.mp3", coverpath: "2.webp" },
     { songname: "Rowdy Baby", filepath: "3.mp3", coverpath: "3.webp" },
     { songname: "Lover", filepath: "4.mp3", coverpath: "4.webp" },
     { songname: "opiya re", filepath: "5.mp3", coverpath: "5.webp" },
-    { songname: "slame ishq", filepath: "6.mp3", coverpath: "6.webp" },
-    { songname: "arka", filepath: "7.mp3", coverpath: "7.webp" },
+    { songname: "salame ishq", filepath: "6.mp3", coverpath: "6.webp" },
 ]
 
 songItems.forEach((element, i) => {
